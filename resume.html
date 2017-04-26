@@ -11,6 +11,10 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway|Asul|Work+Sans" rel="stylesheet">
 
         <!-- Bootstrap -->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="application/javascript"
+                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="application/javascript"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="all"
               integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all"
@@ -73,6 +77,12 @@
             .resume .section .section-header .secondary {
                 color: #666;
             }
+            .resume .section .section-header .help {
+                font-size: 11px;
+                font-family: 'Work Sans', sans-serif;
+                color: #356c8c;
+                margin-left: 10px;
+            }
 
             .resume .skills-section table {
                 width: 100%;
@@ -89,10 +99,18 @@
             .resume .experience-section .job {
                 margin-bottom: 15px;
             }
+            .resume .experience-section .job .header a, .resume .experience-section .job .header a:focus {
+                text-decoration: none;
+            }
+            .resume .experience-section .job .header a:hover {
+                text-decoration: none;
+                border-bottom: 1px dotted #00659c;
+            }
             .resume .experience-section .job .header .company {
                 font-family: 'Raleway', sans-serif;
                 font-size: 19px;
                 font-weight: 700;
+                color: black;
             }
             .resume .experience-section .job .header .title {
                 font-family: 'Raleway', sans-serif;
@@ -103,6 +121,20 @@
             .resume .experience-section .job .header .when {
                 font-size: 16px;
                 float: right;
+            }
+            .resume .experience-section .job .details .skillSummary {
+                margin-bottom: 8px;
+            }
+            .resume .experience-section .job .details .skillSummary .lbl {
+                vertical-align: top;
+                font-weight: 600;
+            }
+            .resume .experience-section .job .details .skillSummary .skills {
+                padding-left: 8px;
+                color: #0088ce;
+            }
+            .resume .experience-section .job .details ul {
+                margin-left: -20px;
             }
 
             .resume .education-section .degree {
@@ -121,6 +153,9 @@
 
         <style media="print">
             @media print {
+                .no-print {
+                    display: none;
+                }
                 a[href]:after {
                     content: none !important;
                 }
@@ -168,6 +203,7 @@
     </head>
 
     <body class="resume">
+
         <div class="container">
 
             <div class="row name-row">
@@ -288,7 +324,7 @@
                                         <span class="fa fa-circle"></span>
                                         <span class="fa fa-circle"></span>
                                         <span class="fa fa-circle"></span>
-                                        <span class="fa fa-circle-o"></span>
+                                        <span class="fa fa-circle"></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -297,7 +333,7 @@
                                         <span class="fa fa-circle"></span>
                                         <span class="fa fa-circle"></span>
                                         <span class="fa fa-circle"></span>
-                                        <span class="fa fa-circle-o"></span>
+                                        <span class="fa fa-circle"></span>
                                         <span class="fa fa-circle-o"></span>
                                     </td>
                                 </tr>
@@ -326,7 +362,7 @@
                                     <td class="level">
                                         <span class="fa fa-circle"></span>
                                         <span class="fa fa-circle"></span>
-                                        <span class="fa fa-circle-o"></span>
+                                        <span class="fa fa-circle"></span>
                                         <span class="fa fa-circle-o"></span>
                                         <span class="fa fa-circle-o"></span>
                                     </td>
@@ -341,7 +377,7 @@
                                         <span class="fa fa-circle"></span>
                                         <span class="fa fa-circle"></span>
                                         <span class="fa fa-circle"></span>
-                                        <span class="fa fa-circle-o"></span>
+                                        <span class="fa fa-circle"></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -351,7 +387,7 @@
                                         <span class="fa fa-circle"></span>
                                         <span class="fa fa-circle"></span>
                                         <span class="fa fa-circle"></span>
-                                        <span class="fa fa-circle-o"></span>
+                                        <span class="fa fa-circle"></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -391,7 +427,7 @@
                                         <span class="fa fa-circle"></span>
                                         <span class="fa fa-circle"></span>
                                         <span class="fa fa-circle"></span>
-                                        <span class="fa fa-circle-o"></span>
+                                        <span class="fa fa-circle"></span>
                                     </td>
                                 </tr>
                             </table>
@@ -428,14 +464,17 @@
                         <div class="section-header">
                             <span class="primary">Work</span>
                             <span class="secondary">Experience</span>
+                            <span class="help no-print">(click job for details)</span>
                         </div>
                         <div class="section-body">
                             <!-- Red hat -->
                             <div class="job">
                                 <div class="header">
-                                    <span class="company">Red Hat</span>
-                                    <span class="title">Principal Engineer</span>
-                                    <span class="when">(Jun 2012 - Present)</span>
+                                    <a data-toggle="collapse" href="#redhatDetails" aria-expanded="false" aria-controls="redhatDetails">
+                                        <span class="company">Red Hat</span>
+                                        <span class="title">Principal Engineer</span>
+                                        <span class="when">(Jun 2012 - Present)</span>
+                                    </a>
                                 </div>
                                 <div class="description">
                                     <p>
@@ -447,13 +486,54 @@
                                         <a href="http://www.apidesigner.org/">API Design Studio</a>.
                                     </p>
                                 </div>
+                                <div class="details collapse no-print" id="redhatDetails">
+                                    <div class="well">
+                                        <div class="skillSummary">
+                                            <table>
+                                                <tr>
+                                                    <td class="lbl" nowrap="nowrap">Primary Skills:</td>
+                                                    <td class="skills">Java, TypeScript, HTML/CSS, SQL, maven, git, WildFly, Angular,
+                                                        GWT/Errai, Vert.x, APIs, Swagger/OpenAPI</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                Project lead for <a href="http://www.apidesigner.org/">API Design Studio</a>, a solution
+                                                (Angular 2 + Typescript) that lets users visually design their Swagger/OpenAPI API(s).
+                                            </li>
+                                            <li>
+                                                Project lead for <a href="http://www.apiman.io/">APIMan</a>, an API Management solution
+                                                with full management UI (Angular 1) and separate API Gateway (JAX-RS+WildFly or
+                                                <a href="http://vertx.io/">Vert.x</a>).
+                                            </li>
+                                            <li>
+                                                Served on the Oasis technical committee for the
+                                                <a href="http://docs.oasis-open.org/s-ramp/s-ramp/v1.0/s-ramp-v1.0-part1-foundation.html">S-RAMP specification</a>.
+                                            </li>
+                                            <li>
+                                                Major contributor to the <a href="https://github.com/Governance/dtgov">DTGov</a> project,
+                                                a design-time governance solution that coupled a custom UI with <a href="https://www.jbpm.org/">jBPM</a> workflows.
+                                            </li>
+                                            <li>
+                                                Primary contributor to the S-RAMP project (later renamed <a href="https://github.com/ArtificerRepo">Artificer</a>),
+                                                a SOA artifact repository (J2EE application with GWT/Errai UI).
+                                            </li>
+                                            <li>
+                                                Guided/mentored more junior engineers on the team.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Yale University -->
                             <div class="job">
                                 <div class="header">
-                                    <span class="company">Yale University</span>
-                                    <span class="title">Team Lead</span>
-                                    <span class="when">(Nov 2008 - Jun 2012)</span>
+                                    <a data-toggle="collapse" href="#yaleDetails" aria-expanded="false" aria-controls="yaleDetails">
+                                        <span class="company">Yale University</span>
+                                        <span class="title">Team Lead</span>
+                                        <span class="when">(Nov 2008 - Jun 2012)</span>
+                                    </a>
                                 </div>
                                 <div class="description">
                                     <span>
@@ -462,13 +542,51 @@
                                         Identity and Role management, and SOA/ESB initiatives.
                                     </span>
                                 </div>
+                                <div class="details collapse no-print" id="yaleDetails">
+                                    <div class="well">
+                                        <div class="skillSummary">
+                                            <table>
+                                                <tr>
+                                                    <td class="lbl" nowrap="nowrap">Primary Skills:</td>
+                                                    <td class="skills">Java, SQL, HTML/CSS, maven, svn, JBoss, SOA, GWT</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                Supervised a small team of primarily Java software developers responsible for a range of
+                                                applications such as CAS (central authentication server), Portal, Calendar, and IDM
+                                                (Identity, Access, and Role Management).
+                                            </li>
+                                            <li>
+                                                Designed/architected a new J2EE/GWT application for provisioning accounts and roles within
+                                                the university.
+                                            </li>
+                                            <li>
+                                                Customized and deployed the <a href="https://www.apereo.org/projects/bedework">Bedework</a>
+                                                open source calendaring software to serve Yale's <a href="http://calendar.yale.edu">public events</a>
+                                                calendaring needs.
+                                            </li>
+                                            <li>
+                                                Added a number of features not present in Bedework, including page caching, additional
+                                                administrative functions, automatic provisioning of new calendars, etc.
+                                            </li>
+                                            <li>
+                                                Served on the Bedework project's Steering Committee and <strong>currently</strong> serve as the
+                                                committee chair.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Active Endpoints -->
                             <div class="job">
                                 <div class="header">
-                                    <span class="company">Active Endpoints</span>
-                                    <span class="title">Principal Engineer</span>
-                                    <span class="when">(May 2004 - Nov 2008)</span>
+                                    <a data-toggle="collapse" href="#aeiDetails" aria-expanded="false" aria-controls="aeiDetails">
+                                        <span class="company">Active Endpoints</span>
+                                        <span class="title">Principal Engineer</span>
+                                        <span class="when">(May 2004 - Nov 2008)</span>
+                                    </a>
                                 </div>
                                 <div class="description">
                                     <span>
@@ -478,13 +596,52 @@
                                         and a visual Designer (Eclipse based IDE).
                                     </span>
                                 </div>
+                                <div class="details collapse no-print" id="aeiDetails">
+                                    <div class="well">
+                                        <div class="skillSummary">
+                                            <table>
+                                                <tr>
+                                                    <td class="lbl" nowrap="nowrap">Primary Skills:</td>
+                                                    <td class="skills">Java, SQL, SOA, XML/XPath/XQuery, ant, svn</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                Created a unit testing framework for testing BPEL processes (called BUnit) – this framework
+                                                was later added as a major feature of the product.
+                                            </li>
+                                            <li>
+                                                Created an Eclipse build framework for validating and indexing web service resources (BPEL,
+                                                WSDL, Schemas, etc…) – this framework was later added as a major Designer feature.
+                                            </li>
+                                            <li>
+                                                Designed and implemented the BPEL process state persistence layer for saving the state of a
+                                                running BPEL process to a data source (extended to support failover/recovery).
+                                            </li>
+                                            <li>
+                                                Implemented support for two XML-based databases as persistence engines: Software AG’s
+                                                Tamino XML database and the open source eXist XML database.
+                                            </li>
+                                            <li>
+                                                Developed workflow extensions to the BPEL engine based on the WS-BPEL4People and WS-HumanTask
+                                                specifications.  This allows people to participate in BPEL orchestrations.
+                                            </li>
+                                            <li>
+                                                Implemented support for XPath, XQuery, and JavaScript expressions within BPEL processes.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Tangoe -->
                             <div class="job">
                                 <div class="header">
-                                    <span class="company">Tangoe Inc.</span>
-                                    <span class="title">Senior Prod. Development Engineer</span>
-                                    <span class="when">(Dec 2003 - May 2004)</span>
+                                    <a data-toggle="collapse" href="#tangoeDetails" aria-expanded="false" aria-controls="tangoeDetails">
+                                        <span class="company">Tangoe Inc.</span>
+                                        <span class="title">Senior Prod. Development Engineer</span>
+                                        <span class="when">(Dec 2003 - May 2004)</span>
+                                    </a>
                                 </div>
                                 <div class="description">
                                     <span>
@@ -493,13 +650,34 @@
                                         managing inventory, and analyzing usage costs.
                                     </span>
                                 </div>
+                                <div class="details collapse no-print" id="tangoeDetails">
+                                    <div class="well">
+                                        <div class="skillSummary">
+                                            <table>
+                                                <tr>
+                                                    <td class="lbl" nowrap="nowrap">Primary Skills:</td>
+                                                    <td class="skills">Java, SQL</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                Responsible for the Assurance subsystem, which analyzed large amounts of billing data
+                                                and report problems or billing discrepancies.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                             <!-- Mirror Worlds -->
                             <div class="job">
                                 <div class="header">
-                                    <span class="company">Mirror Worlds Tech.</span>
-                                    <span class="title">Senior Software Engineer</span>
-                                    <span class="when">(Jun 1999 - Nov 2003)</span>
+                                    <a data-toggle="collapse" href="#mwtDetails" aria-expanded="false" aria-controls="mwtDetails">
+                                        <span class="company">Mirror Worlds Tech.</span>
+                                        <span class="title">Senior Software Engineer</span>
+                                        <span class="when">(Jun 1999 - Nov 2003)</span>
+                                    </a>
                                 </div>
                                 <div class="description">
                                     <span>
@@ -511,6 +689,54 @@
                                         utility that installed on a single user’s Windows PC and allowed the user to search for 
                                         their "stuff".
                                     </span>
+                                </div>
+                                <div class="details collapse no-print" id="mwtDetails">
+                                    <div class="well">
+                                        <div class="skillSummary">
+                                            <table>
+                                                <tr>
+                                                    <td class="lbl" nowrap="nowrap">Primary Skills:</td>
+                                                    <td class="skills">Java, HTML/CSS, JavaScript, C++, Ant</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <h4>Server Projects</h4>
+                                        <ul>
+                                            <li>
+                                                Co-designed a front-end (user interface) custom MVC infrastructure using servlet and JSP
+                                                technology.
+                                            </li>
+                                            <li>
+                                                Designed and implemented a plug-in command architecture using packaged JAR files and
+                                                custom class loaders.  The system allowed server administrators to add functionality
+                                                to the server without restarting it.
+                                            </li>
+                                            <li>
+                                                Designed and implemented a unique dynamic view of search results using HTML/JavaScript.
+                                            </li>
+                                            <li>
+                                                Wrote an indexing module based on the Lucene Indexer.  This module enabled the server
+                                                to function on a greater number of platforms, because it was written completely in Java.
+                                            </li>
+                                        </ul>
+                                        <h4>Client Projects</h4>
+                                        <ul>
+                                            <li>
+                                                Implemented a custom user interface class library using SDL (a cross platform drawing
+                                                library).  This included the creation of a custom widget set, along with some integration
+                                                with the Windows GDI (font rendering, tool tips, etc…).
+                                            </li>
+                                            <li>
+                                                Used the C++ API binding of the server’s Soap/XML programmatic interface to allow the
+                                                client application to communicate with the server.  This feature extends the client
+                                                application beyond its intended use of searching only a single user’s files.
+                                            </li>
+                                            <li>
+                                                Leader of a team that designed and prototyped a next generation 3D interface to the client.
+                                                The prototype used OpenGL to render search results as a three-dimensional stream of data.
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
