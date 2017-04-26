@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Resume :: Eric Wittmann (2017)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway|Asul|Work+Sans" rel="stylesheet">
+
+        <!-- Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="all"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all"
+              integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+        <!-- Custom Styles -->
+        <style type="text/css">
+            body {
+                font-family: 'Work Sans', sans-serif;
+                font-size: 15px;
+            }
+            .resume .name-row {
+                margin-top: 20px;
+                border-top: 1px solid #00659c;
+                border-bottom: 1px solid #00659c;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-bottom: 25px;
+            }
+            .resume .name-row .name {
+                font-family: 'Raleway', sans-serif;
+                font-size: 35px;
+            }
+            .resume .name-row .name .first {
+            }
+            .resume .name-row .name .last {
+                color: #00659c;
+            }
+            .resume .name-row .title {
+                font-family: 'Raleway', sans-serif;
+                font-size: 21px;
+            }
+
+            .resume .name-row .info {
+                padding-top: 8px;
+                font-size: 15px;
+            }
+            .resume .name-row .info .info-row .lbl {
+                font-weight: 600;
+                width: 90px;
+                display: inline-block;
+                color: #00659c;
+            }
+            .resume .name-row .info .info-row .lbl .fa {
+                margin-right: 5px;
+            }
+
+            .resume .section {
+                margin-bottom: 20px;
+            }
+            .resume .section .section-header {
+                font-family: 'Raleway', sans-serif;
+                font-size: 24px;
+                text-transform: uppercase;
+            }
+            .resume .section .section-header .primary {
+                font-weight: 700;
+                color: #00659c;
+            }
+            .resume .section .section-header .secondary {
+                color: #666;
+            }
+
+            .resume .skills-section table {
+                width: 100%;
+                margin-bottom: 18px;
+            }
+            .resume .skills-section table td.skill {
+            }
+            .resume .skills-section table td.level {
+                width: 1%;
+                white-space: nowrap;
+                color: #00659c;
+            }
+
+            .resume .experience-section .job {
+                margin-bottom: 15px;
+            }
+            .resume .experience-section .job .header .company {
+                font-family: 'Raleway', sans-serif;
+                font-size: 19px;
+                font-weight: 700;
+            }
+            .resume .experience-section .job .header .title {
+                font-family: 'Raleway', sans-serif;
+                font-size: 19px;
+                color: #00659c;
+                font-weight: 700;
+            }
+            .resume .experience-section .job .header .when {
+                font-size: 16px;
+                float: right;
+            }
+
+            .resume .education-section .degree {
+                margin-bottom: 5px;
+            }
+            .resume .education-section .degree .header .school {
+                font-family: 'Raleway', sans-serif;
+                font-size: 19px;
+                font-weight: 700;
+            }
+            .resume .education-section .degree .header .when {
+                font-size: 16px;
+                float: right;
+            }
+        </style>
+
+        <style media="print">
+            @media print {
+                a[href]:after {
+                    content: none !important;
+                }
+                .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+                    float: left;
+                }
+                .col-md-12 {
+                    width: 100%;
+                }
+                .col-md-11 {
+                    width: 91.66666667%;
+                }
+                .col-md-10 {
+                    width: 83.33333333%;
+                }
+                .col-md-9 {
+                    width: 75%;
+                }
+                .col-md-8 {
+                    width: 66.66666667%;
+                }
+                .col-md-7 {
+                    width: 58.33333333%;
+                }
+                .col-md-6 {
+                    width: 50%;
+                }
+                .col-md-5 {
+                    width: 41.66666667%;
+                }
+                .col-md-4 {
+                    width: 33.33333333%;
+                }
+                .col-md-3 {
+                    width: 25%;
+                }
+                .col-md-2 {
+                    width: 16.66666667%;
+                }
+                .col-md-1 {
+                    width: 8.33333333%;
+                }
+            }
+        </style>
+    </head>
+
+    <body class="resume">
+        <div class="container">
+
+            <div class="row name-row">
+                <div class="col-md-8">
+                    <div class="name">
+                        <span class="first">Eric</span>
+                        <span class="last">Wittmann</span>
+                    </div>
+                    <div class="title">
+                        <span class="current">Principal Software Engineer</span>
+                    </div>
+                </div>
+                <div class="col-md-4 info">
+                    <div class="info-row">
+                        <span class="lbl"><span class="fa fa-fw fa-phone"></span>Phone:</span>
+                        <span class="val">(203) 744-9727</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="lbl"><span class="fa fa-fw fa-envelope-o"></span>Email:</span>
+                        <span class="val"><a href="mailto:eric.wittmann@gmail.com">eric.wittmann@gmail.com</a></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="lbl"><span class="fa fa-fw fa-github"></span>GitHub:</span>
+                        <span class="val"><a href="https://github.com/EricWittmann">EricWittmann</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row columns-row">
+                <div class="col-md-5 left-column">
+                    <div class="about-section section">
+                        <div class="section-header">
+                            <span class="primary">About</span>
+                            <span class="secondary">Me</span>
+                        </div>
+                        <div class="section-body">
+                            <p>
+                                Approaching 20 years as a professional Software Engineer/Project Lead with experience in the
+                                full lifecycle of software design, development, testing, and deployment using diverse tools,
+                                technologies, and techniques.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="skills-section section">
+                        <div class="section-header">
+                            <span class="primary">Technical</span>
+                            <span class="secondary">Skills</span>
+                        </div>
+                        <div class="section-body">
+                            <table class="skills languages">
+                                <tr>
+                                    <td class="skill">Java</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="skill">SQL</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="skill">TypeScript/JavaScript</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="skill">HTML/CSS</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="skill">Python</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table class="skills frameworks">
+                                <tr>
+                                    <td class="skill">Angular</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="skill">GWT/Errai</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="skill">Servlet/J2EE/JPA</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="skill">REST APIs (JAX-RS)</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="skill">Vert.x (Async Java)</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="skill">Spring/Spring MVC</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table class="skills tools">
+                                <tr>
+                                    <td class="skill">Maven/Ant</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="skill">Git/SVN/CVS</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="skill">Tomcat/WildFly/Jetty</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="skill">XML/XPath/XQuery (SOA)</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="skill">Swagger/OpenAPI</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="skill">Eclipse/WebStorm</td>
+                                    <td class="level">
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle"></span>
+                                        <span class="fa fa-circle-o"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="education-section section">
+                        <div class="section-header">
+                            <span class="primary">Education</span>
+                        </div>
+                        <div class="section-body">
+                            <div class="degree">
+                                <div class="header">
+                                    <span class="school">Yale University</span>
+                                    <span class="when">(1998 - 1999)</span>
+                                </div>
+                                <div class="description">
+                                    Master of Science in Computer Science
+                                </div>
+                            </div>
+                            <div class="degree">
+                                <div class="header">
+                                    <span class="school">Bucknell University</span>
+                                    <span class="when">(1994 - 1998)</span>
+                                </div>
+                                <div class="description">
+                                    Bachelor of Science in Computer Science
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 right-column">
+                    <div class="experience-section section">
+                        <div class="section-header">
+                            <span class="primary">Work</span>
+                            <span class="secondary">Experience</span>
+                        </div>
+                        <div class="section-body">
+                            <!-- Red hat -->
+                            <div class="job">
+                                <div class="header">
+                                    <span class="company">Red Hat</span>
+                                    <span class="title">Principal Engineer</span>
+                                    <span class="when">(Jun 2012 - Present)</span>
+                                </div>
+                                <div class="description">
+                                    <p>
+                                        Working in the JBoss Middleware division as the open source (upstream) project lead for
+                                        several projects including
+                                        <a href="https://github.com/ArtificerRepo">S-RAMP</a> (later renamed to Artificer),
+                                        <a href="https://github.com/Governance/dtgov">DTGov</a> (design-time governance),
+                                        <a href="http://www.apiman.io/latest/">APIMan</a> (API Management), and
+                                        <a href="http://www.apidesigner.org/">API Design Studio</a>.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Yale University -->
+                            <div class="job">
+                                <div class="header">
+                                    <span class="company">Yale University</span>
+                                    <span class="title">Team Lead</span>
+                                    <span class="when">(Nov 2008 - Jun 2012)</span>
+                                </div>
+                                <div class="description">
+                                    <span>
+                                        Developing a wide range of solutions to serve the IT needs of Yale University, including open
+                                        source public events calendaring (<a href="https://www.apereo.org/projects/bedework">Bedework</a>),
+                                        Identity and Role management, and SOA/ESB initiatives.
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Active Endpoints -->
+                            <div class="job">
+                                <div class="header">
+                                    <span class="company">Active Endpoints</span>
+                                    <span class="title">Principal Engineer</span>
+                                    <span class="when">(May 2004 - Nov 2008)</span>
+                                </div>
+                                <div class="description">
+                                    <span>
+                                        Developing server technology and tooling, using Java Enterprise technologies, for BPEL
+                                        (Business Process Execution Language) technologies.  BPEL is an XML based process orchestration
+                                        language.  The ActiveVOS product includes an enterprise BPEL runtime engine (a J2EE application)
+                                        and a visual Designer (Eclipse based IDE).
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Tangoe -->
+                            <div class="job">
+                                <div class="header">
+                                    <span class="company">Tangoe Inc.</span>
+                                    <span class="title">Senior Prod. Development Engineer</span>
+                                    <span class="when">(Dec 2003 - May 2004)</span>
+                                </div>
+                                <div class="description">
+                                    <span>
+                                        Working as a senior engineer on a J2EE "Telecommunications Cost Management" application.  The
+                                        application helped companies reduce their telecommunications spend by importing billing data,
+                                        managing inventory, and analyzing usage costs.
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Mirror Worlds -->
+                            <div class="job">
+                                <div class="header">
+                                    <span class="company">Mirror Worlds Tech.</span>
+                                    <span class="title">Senior Software Engineer</span>
+                                    <span class="when">(Jun 1999 - Nov 2003)</span>
+                                </div>
+                                <div class="description">
+                                    <span>
+                                        Working as a designer and implementer of both a Java based server product as well as a C++ 
+                                        based, Windows client application.  Mirror Worlds Technologies had two products, both based 
+                                        on a "time-centric" content management software paradigm envisioned by Yale professor David 
+                                        Gelernter.  The server was a groupware/collaborative product that allowed multiple users to 
+                                        store, retrieve, and share documents through a web browser.  The client application was a 
+                                        utility that installed on a single user’s Windows PC and allowed the user to search for 
+                                        their "stuff".
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
