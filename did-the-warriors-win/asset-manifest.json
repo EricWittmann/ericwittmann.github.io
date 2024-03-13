@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://ericwittmann.github.io/did-the-warriors-win/static/css/main.84fbe12c.css",
-    "main.js": "https://ericwittmann.github.io/did-the-warriors-win/static/js/main.c95238a8.js",
+    "main.js": "https://ericwittmann.github.io/did-the-warriors-win/static/js/main.b85a2def.js",
     "static/js/787.26d5013c.chunk.js": "https://ericwittmann.github.io/did-the-warriors-win/static/js/787.26d5013c.chunk.js",
     "static/media/pfbg_992@2x.jpg": "https://ericwittmann.github.io/did-the-warriors-win/static/media/pfbg_992@2x.30e8d31f821a144fe52c.jpg",
     "static/media/pfbg_768@2x.jpg": "https://ericwittmann.github.io/did-the-warriors-win/static/media/pfbg_768@2x.eea28e73c0df6dbbb1ff.jpg",
@@ -12,11 +12,11 @@
     "static/media/status-icon-sprite.svg": "https://ericwittmann.github.io/did-the-warriors-win/static/media/status-icon-sprite.4fee9fefc3971799d2dd.svg",
     "index.html": "https://ericwittmann.github.io/did-the-warriors-win/index.html",
     "main.84fbe12c.css.map": "https://ericwittmann.github.io/did-the-warriors-win/static/css/main.84fbe12c.css.map",
-    "main.c95238a8.js.map": "https://ericwittmann.github.io/did-the-warriors-win/static/js/main.c95238a8.js.map",
+    "main.b85a2def.js.map": "https://ericwittmann.github.io/did-the-warriors-win/static/js/main.b85a2def.js.map",
     "787.26d5013c.chunk.js.map": "https://ericwittmann.github.io/did-the-warriors-win/static/js/787.26d5013c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.84fbe12c.css",
-    "static/js/main.c95238a8.js"
+    "static/js/main.b85a2def.js"
   ]
 }
